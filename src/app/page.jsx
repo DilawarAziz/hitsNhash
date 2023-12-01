@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <div className="main">
       <div className='bg-black w-full'>
-        <nav className="nav !px-2">
-          <Image src="/logo.png" width={0} height={0} sizes='100vw' alt="logo" className="w-[12%] sm:w-[10%] " />
-          <Link href='/product' className="text-white text-base md:text-xl cool-link">
+        <nav className="w-full flex  !px-2">
+          <Image src="/logo.png" width={0} height={0} sizes='100vw' alt="logo" className="w-[12%] sm:w-[10%] xl:w-[120px] " />
+          {/* <Link href='/product' className="text-white text-base md:text-xl cool-link">
             Products
-          </Link>
+          </Link> */}
         </nav>
       </div>
       <div className="bgimage-parent ">
