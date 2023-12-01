@@ -1,41 +1,52 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Modal from '../../components/modal'
 function Product() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModal = () => {
+        if (isModalOpen) {
+            setIsModalOpen(false);
+        } else {
+            setIsModalOpen(true);
+        }
+    };
     return (
         <main className='bg-gradient-to-r from-pink-500 to-purple-500'>
             <div className='bg-black w-full'>
-                <nav className="nav">
-                    <Link href='/'>
-                        <Image src="/logo.png" width={0} height={0} sizes='100vw' alt="logo" className="logonav " />
+                <nav className="nav !px-2">
+                    <Link href='/' className=" w-[12%] sm:w-[10%]">
+                        <Image src="/logo.png" width={0} height={0} sizes='100vw' alt="logo" className='w-full' />
                     </Link>
-                    <div className='flex gap-8'>
+                    <div className='flex gap-2 sm:gap-8'>
 
-                        <Link href='/' className="text-white text-xl cool-link">
+                        <Link href='/' className="text-white text-base md:text-xl cool-link">
                             Home
                         </Link>
-                        <Link href='/product' className="text-white text-xl cool-link">
+                        <Link href='/product' className="text-white  text-base md:text-xl cool-link">
                             Products
                         </Link>
                     </div>
-
                 </nav>
             </div>
-            <div className='bg-black opacity-70  flex items-center justify-center h-[200px] '>
-
-                <h1 className='text-5xl text-white font-bold'>
+            <div className='bg-black opacity-70  flex items-center justify-center h-[100px] md:h-[200px] '>
+                <h1 className='md:text-4xl text-2xl lg:text-5xl text-white font-bold'>
                     Products
                 </h1>
             </div>
-            <div className=" mt-40">
-                <div className="max-w-[1240px] mx-auto flex flex-col space-y-16  ">
-                    <div className='grid grid-cols-2 items-start gap-20'>
-                        <div>
+            <div className=" mt-20 sm:mt-40">
+                <Modal isModalOpen={isModalOpen} toggleModal={toggleModal} />
+                <div className="max-w-[1240px] mx-auto flex flex-col space-y-16  px-4">
+                    <div className='grid grid-cols-1 sm:grid-cols-2 items-start gap-20'>
+                        <div className=' relative'>
+                            <Image src="/arrow.svg" onClick={toggleModal} alt="logo" width={25} height={25} sizes='100vw' className="top-2 right-2 absolute cursor-pointer" />
 
-                            <Image src="/cig.png" width={0} height={0} sizes='100vw' alt="logo" className="w-full " />
+                            <Image src="/cigr.png" width={0} height={0} sizes='100vw' alt="logo" className="w-full " />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='text-5xl  font-bold'>
+                            <h1 className='md:text-4xl text-2xl lg:text-5xl  font-bold'>
                                 Doob Tube Joint
                             </h1>
                             <p className='text-[#FFBC00]'> 28 customer reviews</p>
@@ -48,7 +59,7 @@ function Product() {
                         </div>
                     </div>
                     <div className='text-white space-y-3'>
-                        <h1 className='text-5xl  font-bold'>
+                        <h1 className='md:text-4xl text-2xl lg:text-5xl  font-bold'>
                             Description
                         </h1>
                         <p>
@@ -56,11 +67,11 @@ function Product() {
                         </p>
                     </div>
                     <div>
-                        <h1 className='text-5xl text-white font-bold'>
+                        <h1 className='md:text-4xl text-2xl lg:text-5xl text-white font-bold'>
                             Reviews
                         </h1>
                     </div>
-                    <div className='grid grid-cols-2 gap-20 !mb-20'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-6 md:gap-20 !mb-20'>
                         <div className='p-6 flex flex-col justify-between hover:shadow-xl transition-shadow h-[200px] rounded-xl bg-white'>
                             <div className='flex gap-4 items-end'>
                                 <h1 className='font-bold text-xl'>
