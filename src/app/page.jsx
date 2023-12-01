@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className="bgimage-parent ">
         <div className="w-full flex justify-between flex-col h-[100%]  absolute top-0">
-          <div className=" ml-auto xl:mr-[2%] lg:space-y-4 mt-[18%] mx-2 flex flex-col 2xsm:items-end xsm:items-center ">
+          <div className=" ml-auto xl:mr-[2%] lg:space-y-4 mt-[18%] mr-2 xsm:mr-0 sm:mr-2  flex flex-col items-end xsm:items-center w-[fit-content] ">
             <div className='w-[50%] sm:w-[60%] md:w-auto xl:w-[70%]   relative'>
               <Image src="/logo.png" alt="logo" width={0} height={0} sizes='100vw' className="w-full" />
             </div>
