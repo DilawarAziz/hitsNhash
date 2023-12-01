@@ -12,23 +12,19 @@ export default function Home() {
           </Link>
         </nav>
       </div>
-      <div className="bgimage-parent sm:h-[400px] md:h-[600px] lg:h-[940px]">
-        <div className="xl:max-w-[1240px] mx-auto sm:h-[400px] md:h-[600px] lg:h-[940px] w-full">
-          <div className='flex flex-col justify-between sm:h-[400px] md:h-[600px] lg:h-[940px]  w-full xl:w-[1240px]' >
-
-            <div className="logo-parent ml-auto  lg:space-y-4 mt-[10%] mx-2">
-              <div className='w-[70%]  relative'>
-                <Image src="/logo.png" alt="logo" width={0} height={0} sizes='100vw' className="w-full" />
-              </div>
-              <h1 className='lg:text-4xl md:text-2xl text-base font-bold Cursive'>37 - 43% THC</h1>
-              <h1 className='lg:text-4xl md:text-2xl text-base font-bold Cursive'>Infused Pre-Rolls</h1>
-              <h1 className="bg-[#9C27B0] md:text-2xl text-base Cursive">Get Some!</h1>
+      <div className="bgimage-parent ">
+        <div className="w-full flex justify-between flex-col h-[100%]  absolute top-0">
+          <div className=" ml-auto xl:mr-[2%] lg:space-y-4 mt-[18%] mx-2 flex flex-col 2xsm:items-end xsm:items-center ">
+            <div className='w-[50%] sm:w-[60%] md:w-auto xl:w-[70%]   relative'>
+              <Image src="/logo.png" alt="logo" width={0} height={0} sizes='100vw' className="w-full" />
             </div>
-            <h1 className="text-center md:text-3xl sm:text-2xl text-base lg:text-4xl xl:text-5xl Cursive font-bold my-[5%] mx-2">Consistant From First Hit To Final Ash!</h1>
+            <h1 className='lg:text-3xl xl:text-4xl md:text-2xl sm:text-base xsm:text-[12px] 2xsm:text-[10px] font-bold Cursive'>37 - 43% THC</h1>
+            <h1 className='lg:text-3xl xl:text-4xl md:text-2xl sm:text-base xsm:text-[12px] 2xsm:text-[10px] font-bold Cursive'>Infused Pre-Rolls</h1>
+            <h1 className="bg-[#960AF2] md:text-2xl text-base Cursive">Get Some!</h1>
           </div>
-          <Image src="/web pic.png" width={0} height={0} sizes='100vw' className="backgroundimg" alt='backgroundimg' />
-
+          <h1 className="text-center md:text-3xl sm:text-2xl text-base lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl Cursive font-bold my-[5%] mx-2">Consistant From First Hit To Final Ash!</h1>
         </div>
+        <Image src="/web pic.png" width={0} height={0} sizes='100vw' className="w-full  top-0" alt='backgroundimg' />
       </div>
       <div className="bg-gradient-to-r from-pink-500 to-purple-500 w-full ">
         <div className="max-w-[1240px] mx-auto mt-20 space-y-20 !px-4">
